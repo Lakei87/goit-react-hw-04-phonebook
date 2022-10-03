@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './contactItem.module.css';
 
-const ContactItem = ({ name, number, onBtnClick }) => {
+export default function ContactItem({name, number, onBtnClick}) {
     return (
         <li className={styles.contactList__item}>
             <p className={styles.contactList__name}>{name}:</p>
@@ -14,7 +14,7 @@ const ContactItem = ({ name, number, onBtnClick }) => {
                 Delete
             </button>
         </li>
-    )
+    );
 };
 
 ContactItem.propTypes = {
@@ -22,5 +22,3 @@ ContactItem.propTypes = {
     number: PropTypes.string.isRequired,
     onBtnClick: PropTypes.func.isRequired,
 }
-
-export default ContactItem;

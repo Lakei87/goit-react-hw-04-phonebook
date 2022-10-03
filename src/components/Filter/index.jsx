@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './filter.module.css';
 
-const Filter = ({ onChange, value }) => {
+export default function Filter({onChange, value}) {
     return (
         <label>
             Find contacts by name
@@ -12,12 +12,10 @@ const Filter = ({ onChange, value }) => {
                 value={value}
             />
         </label>
-    )
+    );
 };
 
 Filter.propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.string.isRequired,
-}
-
-export default Filter;
+};
